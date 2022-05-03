@@ -4,7 +4,7 @@
     {
 
         int soruNo = 0, dogru, yanlis;
-
+        
         //butona basilip basilmadigini tutacagimiz degisken
         int tiklanildi = 0;
 
@@ -108,8 +108,13 @@
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //butonun default degeri 'yarışmaya başla' ve tiklandiktan sonra bu yaziyi degistirmek icin sart blogu koyduk
+            if(button5.Text == "Yarışmaya Başla")
+            {
+                button5.Text = "Sonraki Soru";
+            }
             //form'umuza Restart ozelligi atadik ve text'teki yazimizi kontrol ettik
-            if(button5.Text == "Yeniden Başlat")
+            if (button5.Text == "Yeniden Başlat")
             {
                Application.Restart();
             }
